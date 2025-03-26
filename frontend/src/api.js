@@ -11,3 +11,13 @@ export const fetchCryptoPrice = async (symbol) => {
         return null;
     }
 };
+
+export const fetchCryptoPriceHistory = async (symbol) => {
+    try {
+        const response = await axios.get(`${API_URL}/price/${symbol}/history`);
+        return response.data;
+    } catch (error) {
+        console.error('Error fetching price:', error);
+        return null;
+    }
+};
