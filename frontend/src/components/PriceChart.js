@@ -21,7 +21,7 @@ ChartJS.register(
 );
 
 const PriceChart = ({ data }) => {
-  if (!data || !data.history) return <p>No data available</p>;
+  if (!data || !data.history) return <p></p>;
 
   const formattedHistory = data?.history ? data.history.map(([timestamp, price]) => ({
     time: new Date(timestamp).toLocaleDateString("en-GB"),

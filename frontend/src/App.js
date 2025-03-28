@@ -17,10 +17,6 @@ const App = () => {
         setPriceHistoryData(historyData);
     };
 
-    console.log('priceData:', priceData);
-    console.log('priceHistoryData:', priceHistoryData);
-
-
     return (
         <div className="container">
             <h1>Crypto Price Tracker</h1>
