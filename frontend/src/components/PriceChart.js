@@ -23,10 +23,14 @@ ChartJS.register(
 const PriceChart = ({ data }) => {
   if (!data || !data.history) return <p></p>;
 
-  const formattedHistory = data?.history ? data.history.map(([timestamp, price]) => ({
-    time: new Date(timestamp).toLocaleDateString("en-GB"),
-    price,
-  })) : [];
+  const formattedHistory = data?.history
+    ? data.history
+        .map(([timestamp, price]) => ({
+          time: new Date(timestamp).toLocaleDateString("en-GB"),
+          price,
+        }))
+        .slice(0, -2)
+    : [];
 
   const chartData = {
     labels: formattedHistory.map((item) => item.time),
@@ -51,7 +55,7 @@ const PriceChart = ({ data }) => {
 
   return (
     <div className="chart-container">
-      <p>Price History</p>
+      <p>Price History (Last 15 days)</p>
       <Line data={chartData} options={options} />
     </div>
   );

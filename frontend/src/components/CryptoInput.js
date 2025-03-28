@@ -9,7 +9,7 @@ const CryptoInput = ({ onSearch }) => {
       <input
         id="crypto-symbol"
         type="text"
-        placeholder="Enter crypto symbol (e.g., BTC)"
+        placeholder="Enter crypto name (e.g., Bitcoin, Ethereum)"
       />
       <button onClick={handleSearch}>Search</button>
     </div>
