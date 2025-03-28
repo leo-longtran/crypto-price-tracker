@@ -2,7 +2,7 @@
 ## Features
 
 - Enter a cryptocurrency symbol (e.g., Bitcoin, Ethereum) to fetch the current price.
-- Display real-time price updates.
+- Display current price.
 - Show a simple price history chart.
 
 ## How to run app on local
